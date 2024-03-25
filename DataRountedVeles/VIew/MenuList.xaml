@@ -1,0 +1,226 @@
+﻿<Window x:Class="DataRountedVeles.VIew.MenuList"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DataRountedVeles.VIew"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        mc:Ignorable="d"
+        
+        Height="600" Width="600" 
+        ResizeMode="NoResize" 
+        WindowStartupLocation="CenterScreen" 
+        WindowStyle="None" 
+        HorizontalAlignment="Center" >
+
+    <Grid 
+        Background="White"
+        x:Name="panelHeader" 
+        MouseDown="panelHeaderMouseDown" 
+        Cursor="Hand">
+
+        <Border  
+            BorderBrush="White" 
+            BorderThickness="1" 
+            CornerRadius="25">
+
+            <Grid 
+                Cursor="Hand" 
+                Margin="-1,-1,-1,-1">
+
+                <Grid.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF80D9F7" Offset="0"/>
+                        <GradientStop Color="#FF4C6DF7" Offset="1"/>
+                        <GradientStop Color="#FF9BBEE0" Offset="1"/>
+                    </LinearGradientBrush>
+                </Grid.Background>
+
+                <Grid 
+                    x:Name="paTnelHeader" 
+                    Height="55" 
+                    Cursor="Hand" Margin="0,0,0,545" Background="#FF7BCEF7">
+
+                    <TextBlock 
+                        Text="ВЕɅEС"  
+                        HorizontalAlignment="Center" 
+                        VerticalAlignment="Top" 
+                        FontFamily="Impact" 
+                        FontSize="25" 
+                        Foreground="White" 
+                        Width="64" Margin="0,25,0,0" />
+                </Grid>
+            </Grid>
+        </Border>
+
+        <Grid 
+            HorizontalAlignment="Center" 
+            Width="300" Height="450"
+            Margin="0,40,0,0">
+
+            <Grid.Effect>
+                <DropShadowEffect
+                            ShadowDepth="5" 
+                            BlurRadius="50"
+                            Color="Black"
+                            Opacity="1"/>
+            </Grid.Effect>
+
+            <StackPanel Width="298" Height="448" VerticalAlignment="Center">
+                <StackPanel.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF78C8F7"/>
+                        <GradientStop Color="#FF4F73F7" Offset="1"/>
+                    </LinearGradientBrush>
+                </StackPanel.Background>
+
+                <StackPanel.Clip>
+                    <RectangleGeometry 
+                        RadiusX="25" RadiusY="25" 
+                        Rect="0,0,298,448"/>
+                </StackPanel.Clip>
+
+
+                <TextBlock 
+                    Text="Меню"
+                    FontSize="24"
+                    Foreground="White"
+                    HorizontalAlignment="Center"
+                    Margin="0,30,0,0"/>
+                <Button
+                    Margin="0,45,0,0"
+                    Content="Деревянный сруб"
+                    materialDesign:ButtonAssist.CornerRadius="10"
+                    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+                    Style="{StaticResource MaterialDesignPaperDarkButton}"
+                    ToolTip="Resource name: MaterialDesignPaperDarkButton"
+                    FontSize="12"
+                    Cursor="Hand"
+                    Width="160" Height="30" 
+                    Foreground="White" 
+                    BorderBrush="#FFAFD1FF"
+                    Click="WoodListEnter">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FF6FB6F7"/>
+                            <GradientStop Color="#FF6BACF7" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+                <Button
+                    Margin="0,20,0,0"
+                    Content="Сушка"
+                    materialDesign:ButtonAssist.CornerRadius="10"
+                    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+                    Style="{StaticResource MaterialDesignPaperDarkButton}"
+                    ToolTip="Resource name: MaterialDesignPaperDarkButton"
+                    FontSize="12"
+                    Cursor="Hand"
+                    Width="160" Height="30" 
+                    Foreground="White" 
+                    BorderBrush="#FFAFD1FF"
+                    Click="DryingEnter">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FF6AACF7" Offset="0"/>
+                            <GradientStop Color="#FF66A3F7" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+                <Button
+                    Margin="0,20,0,0"
+                    Content="Распил"
+                    materialDesign:ButtonAssist.CornerRadius="10"
+                    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+                    Style="{StaticResource MaterialDesignPaperDarkButton}"
+                    ToolTip="Resource name: MaterialDesignPaperDarkButton"
+                    FontSize="12"
+                    Cursor="Hand"
+                    Width="160" Height="30" 
+                    Foreground="White" 
+                    BorderBrush="#FFAFD1FF"
+                    Click="SawedEnter">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FF66A2F7"/>
+                            <GradientStop Color="#FF629AF7" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+                <Button
+                    Margin="0,20,0,0"
+                    Content="Склад"
+                    materialDesign:ButtonAssist.CornerRadius="10"
+                    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+                    Style="{StaticResource MaterialDesignPaperDarkButton}"
+                    ToolTip="Resource name: MaterialDesignPaperDarkButton"
+                    FontSize="12"
+                    Cursor="Hand"
+                    Width="160" Height="29" 
+                    Foreground="White" 
+                    BorderBrush="#FFAFD1FF"
+                    Click="WarehouseEnter">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FF6198F7"/>
+                            <GradientStop Color="#FF5D91F7" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+                <Button
+                    Margin="0,20,0,0"
+                    Content="Отчетность"
+                    materialDesign:ButtonAssist.CornerRadius="10"
+                    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+                    Style="{StaticResource MaterialDesignPaperDarkButton}"
+                    ToolTip="Resource name: MaterialDesignPaperDarkButton"
+                    FontSize="12"
+                    Cursor="Hand"
+                    Width="160" Height="30" 
+                    Foreground="White" 
+                    BorderBrush="#FFAFD1FF"
+                    Click="ReportingEnter">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FF5D90F7"/>
+                            <GradientStop Color="#FF5886F7" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+                <Button
+                    Margin="0,40,0,0"
+                    Content="Выход"
+                    materialDesign:ButtonAssist.CornerRadius="10"
+                    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+                    Style="{StaticResource MaterialDesignPaperDarkButton}"
+                    ToolTip="Resource name: MaterialDesignPaperDarkButton"
+                    FontSize="12"
+                    Cursor="Hand"
+                    Width="70" Height="25" 
+                    Foreground="White" 
+                    BorderBrush="#FFAFD1FF"
+                    Click="Exit">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FF5783F7"/>
+                            <GradientStop Color="#FF537BF7" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+            </StackPanel>
+        </Grid>
+    </Grid>
+    <Window.Clip>
+        <RectangleGeometry 
+            Rect="0,0,600,600" 
+            RadiusX="25" RadiusY="25"/>
+    </Window.Clip>
+</Window>
+

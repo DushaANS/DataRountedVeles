@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34607.119
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataRountedVeles", "DataRountedVeles\DataRountedVeles.csproj", "{BFE637CF-D7DA-41A7-A04F-E10C9D8C49D6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BFE637CF-D7DA-41A7-A04F-E10C9D8C49D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFE637CF-D7DA-41A7-A04F-E10C9D8C49D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFE637CF-D7DA-41A7-A04F-E10C9D8C49D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFE637CF-D7DA-41A7-A04F-E10C9D8C49D6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F363AC66-482C-4636-9EDB-37B82B5F1CAA}
+	EndGlobalSection
+EndGlobal
